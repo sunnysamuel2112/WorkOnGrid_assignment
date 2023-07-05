@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, jsonify
+from flask import Flask, request, jsonify
 import sqlite3
 import requests
 
@@ -78,11 +78,7 @@ def get_users():
                 return_json.append(user_json)
         conn.commit()
         conn.close()
-        print(return_json)
         
-
-        
-
         return jsonify(return_json)
 
 if __name__ == '__main__':

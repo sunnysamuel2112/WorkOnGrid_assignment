@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello"
+    return "<h1>WorkOnGrid Assignment</h1></b><h3>Use this to access API:  http://localhost:5000/api/users?first_name=Will</h3></b><h4>Submitted by:  SHAN NEHEMIAH SAMUEL MS</h4>"
 
 @app.route('/api/users')
 def get_users():

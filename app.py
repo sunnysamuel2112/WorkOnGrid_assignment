@@ -56,7 +56,6 @@ def get_users():
     else:
         external_api_url = f"https://dummyjson.com/users/search?q={first_name}"
         response = requests.get(external_api_url)
-        #print(response)
         fetched_users = response.json()
 
         #Save the retrieved users to the user table
@@ -79,6 +78,7 @@ def get_users():
         conn.commit()
         conn.close()
         
+        # return the retrieved users in JSON format
         return jsonify(return_json)
 
 if __name__ == '__main__':
